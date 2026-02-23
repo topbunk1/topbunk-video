@@ -1,5 +1,3 @@
-// OLD SCRIPT <script src="https://cdn.jsdelivr.net/gh/timothydesign/scripts@1.0.3/video-pause.js"></script>
-
 window.addEventListener("DOMContentLoaded", (event) => {
   let triggerSelector = "[data-video-pause='trigger']";
 
@@ -57,3 +55,4 @@ window.addEventListener("DOMContentLoaded", (event) => {
     $("body").hasClass("videos-paused") ? playAllVideos() : pauseAllVideos();
   });
 });
+
