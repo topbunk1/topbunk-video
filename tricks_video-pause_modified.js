@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         } else {
           $(this)[0].muted = true;
         }
-        $(this)[0].play();
+        // $(this)[0].play();
       }
     });
   }
@@ -55,5 +55,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     $("body").hasClass("videos-paused") ? playAllVideos() : pauseAllVideos();
   });
 });
+
 
 
