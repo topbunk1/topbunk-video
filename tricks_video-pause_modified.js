@@ -2,7 +2,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   let triggerSelector = "[data-video-pause='trigger']";
 
   function pauseAllVideos() {
-    localStorage.setItem("videos-paused", "true");
+    // localStorage.setItem("videos-paused", "true");
     $("body").addClass("videos-paused");
     $(triggerSelector).addClass("is-paused");
     $(triggerSelector).attr("aria-label", "Play Videos");
@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
   }
   function playAllVideos() {
-    localStorage.setItem("videos-paused", "false");
+    // localStorage.setItem("videos-paused", "false");
     $("body").removeClass("videos-paused");
     $(triggerSelector).removeClass("is-paused");
     $(triggerSelector).attr("aria-label", "Pause Videos");
@@ -43,16 +43,17 @@ window.addEventListener("DOMContentLoaded", (event) => {
     checkMotionPreference();
   });
 
-  if (localStorage.getItem("videos-paused") === "true") {
-    pauseAllVideos();
-  } else if (localStorage.getItem("videos-paused") === "false") {
-    playAllVideos();
-  } else {
-    checkMotionPreference();
-  }
+  // if (localStorage.getItem("videos-paused") === "true") {
+  //   pauseAllVideos();
+  // } else if (localStorage.getItem("videos-paused") === "false") {
+  //   playAllVideos();
+  // } else {
+  //   checkMotionPreference();
+  // }
 
   $(document).on("click", triggerSelector, function () {
     $("body").hasClass("videos-paused") ? playAllVideos() : pauseAllVideos();
   });
 });
+
 
